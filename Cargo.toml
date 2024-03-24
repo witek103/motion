@@ -1,0 +1,20 @@
+[package]
+name = "motion"
+version = "0.1.0"
+authors = ["Witold Lipieta <witek103@gmail.com>"]
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Motion related structs"
+keywords = ["position", "velocity"]
+categories = ["no-std", "embedded"]
+repository = "https://github.com/witek103/motion"
+readme = "README.md"
+
+[dependencies]
+angle = { version = "0.1.0", git = "https://github.com/witek103/angle.git" }
+defmt = { version = "0.3.6", optional = true }
+libm = "0.2.8"
+
+[features]
+use_std = ["angle/use_std"]
+use_defmt = ["dep:defmt", "angle/use_defmt"]
